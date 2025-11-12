@@ -1,7 +1,5 @@
 import Button from '../components/Button';
 
-// TO CUSTOMIZE: Update name, title, summary, and profile image
-
 const Hero = () => {
     const scrollToSection = (sectionId: string) => {
         const element = document.querySelector(sectionId);
@@ -21,7 +19,8 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-400"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+                {/* Mobile: Photo first, Desktop: Photo on right */}
+                <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
                     {/* Left Content */}
                     <div className="flex-1 text-center lg:text-left">
                         {/* Animated greeting */}
